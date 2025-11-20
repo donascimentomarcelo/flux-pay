@@ -1,4 +1,4 @@
-namespace Pay.Domain.Dto.Enums
+namespace Pay.Domain.Enums
 {
     public enum PayMethod
     {

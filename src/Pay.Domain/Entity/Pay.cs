@@ -1,8 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Pay.Domain.Dto.Enums;
+using Pay.Domain.Enums;
 
 namespace Pay.Domain.Entity
 {
@@ -13,10 +9,10 @@ namespace Pay.Domain.Entity
         public PayMethod Method { get; set; }
         public PayStatus Status { get; set; } = PayStatus.Pending;
 
-        public string CustomerName { get; set; }
-        public string CustomerEmail { get; set; }
+        public required string CustomerName { get; set; }
+        public required string CustomerEmail { get; set; }
 
-        public string ExternalReference { get; set; }
+        public required string ExternalReference { get; set; }
 
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
         public DateTime? UpdatedAt { get; set; }

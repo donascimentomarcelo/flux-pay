@@ -1,8 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Pay.Api.Dto.Enums;
+using Pay.Domain.Enums;
 
 namespace Pay.Api.Dto
 {
@@ -10,8 +6,8 @@ namespace Pay.Api.Dto
     {
         public decimal Amount { get; set; }
         public PayMethod Method { get; set; }
-        public string CustomerName { get; set; }
-        public string CustomerEmail { get; set; }
-        public string ExternalReference { get; set; }
+        public required string CustomerName { get; set; }
+        public required string CustomerEmail { get; set; }
+        public required string ExternalReference { get; set; }
     }
 }
