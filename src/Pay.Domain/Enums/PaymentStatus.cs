@@ -1,6 +1,6 @@
 namespace Pay.Domain.Enums
 {
-    public enum PayStatus
+    public enum PaymentStatus
     {
         Pending = 1,
         Processing = 2,

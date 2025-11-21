@@ -1,6 +1,6 @@
 namespace Pay.Domain.Enums
 {
-    public enum PayMethod
+    public enum PaymentMethod
     {
         Pix = 1,
         Card = 2,
