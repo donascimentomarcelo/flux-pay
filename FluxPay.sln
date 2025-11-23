@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pay.Domain", "src\Pay.Domai
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pay.Application", "src\Pay.Application\Pay.Application.csproj", "{D5D1D097-BBFD-44F0-B541-6BFACA95B68B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pay.Infrastructure", "src\Pay.Infrastructure\Pay.Infrastructure.csproj", "{A5378ACE-25F9-4AEA-A05B-49779398FB47}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,18 @@ Global
 		{D5D1D097-BBFD-44F0-B541-6BFACA95B68B}.Release|x64.Build.0 = Release|Any CPU
 		{D5D1D097-BBFD-44F0-B541-6BFACA95B68B}.Release|x86.ActiveCfg = Release|Any CPU
 		{D5D1D097-BBFD-44F0-B541-6BFACA95B68B}.Release|x86.Build.0 = Release|Any CPU
+		{A5378ACE-25F9-4AEA-A05B-49779398FB47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5378ACE-25F9-4AEA-A05B-49779398FB47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5378ACE-25F9-4AEA-A05B-49779398FB47}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{A5378ACE-25F9-4AEA-A05B-49779398FB47}.Debug|x64.Build.0 = Debug|Any CPU
+		{A5378ACE-25F9-4AEA-A05B-49779398FB47}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A5378ACE-25F9-4AEA-A05B-49779398FB47}.Debug|x86.Build.0 = Debug|Any CPU
+		{A5378ACE-25F9-4AEA-A05B-49779398FB47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5378ACE-25F9-4AEA-A05B-49779398FB47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5378ACE-25F9-4AEA-A05B-49779398FB47}.Release|x64.ActiveCfg = Release|Any CPU
+		{A5378ACE-25F9-4AEA-A05B-49779398FB47}.Release|x64.Build.0 = Release|Any CPU
+		{A5378ACE-25F9-4AEA-A05B-49779398FB47}.Release|x86.ActiveCfg = Release|Any CPU
+		{A5378ACE-25F9-4AEA-A05B-49779398FB47}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -65,5 +79,6 @@ Global
 		{6CE27C22-1E98-43E1-9BD0-5D79FB8DF961} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
 		{57EA748C-1555-4634-A785-B0862083355B} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
 		{D5D1D097-BBFD-44F0-B541-6BFACA95B68B} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
+		{A5378ACE-25F9-4AEA-A05B-49779398FB47} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
 	EndGlobalSection
 EndGlobal
