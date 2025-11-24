@@ -1,0 +1,31 @@
+# Build outputs
+**/bin/
+**/obj/
+**/node_modules/
+
+# .NET
+*.dll
+*.exe
+*.pdb
+*.cache
+*.deps.json
+*.runtimeconfig.json
+
+# Visual Studio / VS Code
+.vs/
+.vscode/
+
+# Packages
+*.nupkg
+*.snupkg
+
+# Logs
+*.log
+
+# Database
+*.db
+*.sqlite
+
+# OS
+.DS_Store
+Thumbs.db
