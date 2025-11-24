@@ -4,6 +4,6 @@ namespace Pay.Application.Services
 {
     public interface IPaymentService
     {
-        public CreatePayResponse Create(CreatePaymentRequest request);
+        public Task<CreatePayResponse> Create(CreatePaymentRequest request);
     }
 }

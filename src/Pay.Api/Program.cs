@@ -1,6 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using Pay.Application.Services;
+using Pay.Domain.Interfaces;
 using Pay.Infrastructure.Database;
+using Pay.Infrastructure.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +13,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IPaymentService, PaymentService>();
+builder.Services.AddScoped<IPaymentRepository, PaymentRepository>();
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 

@@ -11,9 +11,9 @@ namespace Pay.Api.Controllers
         private readonly IPaymentService _service = service;
 
         [HttpPost]
-        public IActionResult CreatePayment([FromBody] CreatePaymentRequest request)
+        public async Task<IActionResult> CreatePayment([FromBody] CreatePaymentRequest request)
         {
-            var result = _service.Create(request);
+            var result = await _service.Create(request);
             return Ok(result);
         }
     }
