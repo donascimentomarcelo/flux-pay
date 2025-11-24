@@ -7,5 +7,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Pay.Domain\Pay.Domain.csproj" />
+    <ProjectReference Include="..\Pay.Infrastructure\Pay.Infrastructure.csproj" />
   </ItemGroup>
 </Project>

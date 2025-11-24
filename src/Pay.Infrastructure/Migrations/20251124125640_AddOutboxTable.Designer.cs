@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using Pay.Infrastructure.Database;
@@ -11,9 +12,11 @@ using Pay.Infrastructure.Database;
 namespace Pay.Infrastructure.Migrations
 {
     [DbContext(typeof(FluxPayDbContext))]
-    partial class FluxPayDbContextModelSnapshot : ModelSnapshot
+    [Migration("20251124125640_AddOutboxTable")]
+    partial class AddOutboxTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
