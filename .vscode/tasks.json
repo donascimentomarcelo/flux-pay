@@ -2,35 +2,19 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "build",
+      "label": "build-api",
       "command": "dotnet",
       "type": "process",
       "args": [
         "build",
-        "${workspaceFolder}/src/Pay.Api/Pay.Api.csproj",
-        "/property:GenerateFullPaths=true",
-        "/consoleloggerparameters:NoSummary"
-      ],
-      "problemMatcher": "$msCompile"
+        "${workspaceFolder}/src/Pay.Api/Pay.Api.csproj"
+      ]
     },
     {
-      "label": "publish",
+      "label": "run-api",
       "command": "dotnet",
       "type": "process",
       "args": [
-        "publish",
-        "${workspaceFolder}/src/Pay.Api/Pay.Api.csproj",
-        "/property:GenerateFullPaths=true",
-        "/consoleloggerparameters:NoSummary"
-      ],
-      "problemMatcher": "$msCompile"
-    },
-    {
-      "label": "watch",
-      "command": "dotnet",
-      "type": "process",
-      "args": [
-        "watch",
         "run",
         "--project",
         "${workspaceFolder}/src/Pay.Api/Pay.Api.csproj"
@@ -38,16 +22,85 @@
       "problemMatcher": "$msCompile"
     },
     {
-      "label": "clean",
+      "label": "watch-api",
       "command": "dotnet",
       "type": "process",
       "args": [
-        "clean",
-        "${workspaceFolder}/src/Pay.Api/Pay.Api.csproj",
-        "/property:GenerateFullPaths=true",
-        "/consoleloggerparameters:NoSummary"
+        "watch",
+        "run",
+        "--project",
+        "${workspaceFolder}/src/Pay.Api/Pay.Api.csproj"
+      ]
+    },
+    {
+      "label": "build-worker",
+      "command": "dotnet",
+      "type": "process",
+      "args": [
+        "build",
+        "${workspaceFolder}/src/Pay.OutboxWorker/Pay.OutboxWorker.csproj"
+      ]
+    },
+    {
+      "label": "run-worker",
+      "command": "dotnet",
+      "type": "process",
+      "args": [
+        "run",
+        "--project",
+        "${workspaceFolder}/src/Pay.OutboxWorker/Pay.OutboxWorker.csproj"
+      ]
+    },
+    {
+      "label": "watch-worker",
+      "command": "dotnet",
+      "type": "process",
+      "args": [
+        "watch",
+        "run",
+        "--project",
+        "${workspaceFolder}/src/Pay.OutboxWorker/Pay.OutboxWorker.csproj"
+      ]
+    },
+    {
+      "label": "ef-migrations-add",
+      "type": "shell",
+      "command": "dotnet",
+      "args": [
+        "ef",
+        "migrations",
+        "add",
+        "NewMigration",
+        "-p",
+        "${workspaceFolder}/src/Pay.Infrastructure/Pay.Infrastructure.csproj",
+        "-s",
+        "${workspaceFolder}/src/Pay.Api/Pay.Api.csproj"
       ],
-      "problemMatcher": "$msCompile"
+      "problemMatcher": []
+    },
+    {
+      "label": "ef-update",
+      "type": "shell",
+      "command": "dotnet",
+      "args": [
+        "ef",
+        "database",
+        "update",
+        "-p",
+        "${workspaceFolder}/src/Pay.Infrastructure/Pay.Infrastructure.csproj",
+        "-s",
+        "${workspaceFolder}/src/Pay.Api/Pay.Api.csproj"
+      ]
+    },
+    {
+      "label": "docker-up",
+      "type": "shell",
+      "command": "docker compose up -d"
+    },
+    {
+      "label": "docker-down",
+      "type": "shell",
+      "command": "docker compose down"
     }
   ]
 }

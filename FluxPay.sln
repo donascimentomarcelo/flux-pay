@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pay.Application", "src\Pay.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pay.Infrastructure", "src\Pay.Infrastructure\Pay.Infrastructure.csproj", "{A5378ACE-25F9-4AEA-A05B-49779398FB47}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pay.OutboxWorker", "src\Pay.OutboxWorker\Pay.OutboxWorker.csproj", "{F03EC3CF-512A-4B18-886D-307415E3F710}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,6 +73,18 @@ Global
 		{A5378ACE-25F9-4AEA-A05B-49779398FB47}.Release|x64.Build.0 = Release|Any CPU
 		{A5378ACE-25F9-4AEA-A05B-49779398FB47}.Release|x86.ActiveCfg = Release|Any CPU
 		{A5378ACE-25F9-4AEA-A05B-49779398FB47}.Release|x86.Build.0 = Release|Any CPU
+		{F03EC3CF-512A-4B18-886D-307415E3F710}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F03EC3CF-512A-4B18-886D-307415E3F710}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F03EC3CF-512A-4B18-886D-307415E3F710}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F03EC3CF-512A-4B18-886D-307415E3F710}.Debug|x64.Build.0 = Debug|Any CPU
+		{F03EC3CF-512A-4B18-886D-307415E3F710}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F03EC3CF-512A-4B18-886D-307415E3F710}.Debug|x86.Build.0 = Debug|Any CPU
+		{F03EC3CF-512A-4B18-886D-307415E3F710}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F03EC3CF-512A-4B18-886D-307415E3F710}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F03EC3CF-512A-4B18-886D-307415E3F710}.Release|x64.ActiveCfg = Release|Any CPU
+		{F03EC3CF-512A-4B18-886D-307415E3F710}.Release|x64.Build.0 = Release|Any CPU
+		{F03EC3CF-512A-4B18-886D-307415E3F710}.Release|x86.ActiveCfg = Release|Any CPU
+		{F03EC3CF-512A-4B18-886D-307415E3F710}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -80,5 +94,6 @@ Global
 		{57EA748C-1555-4634-A785-B0862083355B} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
 		{D5D1D097-BBFD-44F0-B541-6BFACA95B68B} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
 		{A5378ACE-25F9-4AEA-A05B-49779398FB47} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
+		{F03EC3CF-512A-4B18-886D-307415E3F710} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
 	EndGlobalSection
 EndGlobal

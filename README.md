@@ -1,4 +1,39 @@
-# flux-pay
+# Estrutura de pastas
+
+.vscode/
+├── launch.json
+└── tasks.json
+
+src/
+├── Pay.Api/
+├── Pay.Application/
+├── Pay.Domain/
+├── Pay.Infrastructure/
+└── Pay.OutboxWorker/
+
+# Debug – Executando com F5
+
+Rodar a API com F5:
+
+- escolha “.NET Launch API”
+
+Rodar o Worker com F5:
+
+- escolha “.NET Launch OutboxWorker”
+
+Rodar ambos simultaneamente (mexendo na API e Worker junto):
+
+- escolha “Run ALL (API + Worker)”
+
+#### Ctrl+Shift+B → run-api
+
+#### Ctrl+Shift+B → run-worker
+
+#### Ctrl+Shift+B → docker-up
+
+#### Ctrl+Shift+B → ef-migrations-add
+
+#### flux-pay
 
 /Payments.Api
 /Payments.Application
@@ -10,7 +45,7 @@
 # Diagrama de sequencia
 
 sequenceDiagram
-    autonumber
+autonumber
 
     participant C as Client
     participant API as Payment API
