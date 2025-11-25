@@ -32,6 +32,10 @@
         "${workspaceFolder}/src/Pay.Api/Pay.Api.csproj"
       ]
     },
+
+    // ---------------------------
+    // Outbox Worker
+    // ---------------------------
     {
       "label": "build-worker",
       "command": "dotnet",
@@ -62,6 +66,44 @@
         "${workspaceFolder}/src/Pay.OutboxWorker/Pay.OutboxWorker.csproj"
       ]
     },
+
+    // ---------------------------
+    // Payment Processor Worker (Kafka consumer)
+    // ---------------------------
+    {
+      "label": "build-paymentprocessor",
+      "command": "dotnet",
+      "type": "process",
+      "args": [
+        "build",
+        "${workspaceFolder}/src/Pay.PaymentProcessorWorker/Pay.PaymentProcessorWorker.csproj"
+      ]
+    },
+    {
+      "label": "run-paymentprocessor",
+      "command": "dotnet",
+      "type": "process",
+      "args": [
+        "run",
+        "--project",
+        "${workspaceFolder}/src/Pay.PaymentProcessorWorker/Pay.PaymentProcessorWorker.csproj"
+      ]
+    },
+    {
+      "label": "watch-paymentprocessor",
+      "command": "dotnet",
+      "type": "process",
+      "args": [
+        "watch",
+        "run",
+        "--project",
+        "${workspaceFolder}/src/Pay.PaymentProcessorWorker/Pay.PaymentProcessorWorker.csproj"
+      ]
+    },
+
+    // ---------------------------
+    // EF Tools
+    // ---------------------------
     {
       "label": "ef-migrations-add",
       "type": "shell",
@@ -92,6 +134,10 @@
         "${workspaceFolder}/src/Pay.Api/Pay.Api.csproj"
       ]
     },
+
+    // ---------------------------
+    // Docker
+    // ---------------------------
     {
       "label": "docker-up",
       "type": "shell",

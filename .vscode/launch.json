@@ -19,6 +19,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
+
     {
       "name": ".NET Launch OutboxWorker",
       "type": "coreclr",
@@ -28,14 +29,27 @@
       "args": [],
       "cwd": "${workspaceFolder}/src/Pay.OutboxWorker",
       "stopAtEntry": false
+    },
+
+    {
+      "name": ".NET Launch PaymentProcessorWorker",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build-paymentprocessor",
+      "program": "${workspaceFolder}/src/Pay.PaymentProcessorWorker/bin/Debug/net10.0/Pay.PaymentProcessorWorker.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/src/Pay.PaymentProcessorWorker",
+      "stopAtEntry": false
     }
   ],
+
   "compounds": [
     {
-      "name": "Run ALL (API + Worker)",
+      "name": "Run ALL (API + Workers)",
       "configurations": [
         ".NET Launch API",
-        ".NET Launch OutboxWorker"
+        ".NET Launch OutboxWorker",
+        ".NET Launch PaymentProcessorWorker"
       ]
     }
   ]
