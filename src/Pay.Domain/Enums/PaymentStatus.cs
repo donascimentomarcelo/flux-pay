@@ -5,7 +5,7 @@ namespace Pay.Domain.Enums
         Pending = 1,
         Processing = 2,
         Approved = 3,
-        Declined = 4,
+        Denied = 4,
         Error = 5,
     }
 }
